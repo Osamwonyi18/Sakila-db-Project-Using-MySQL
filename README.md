@@ -2,7 +2,7 @@
 
 📌 This project showcases **SQL queries** executed on the **`sakila`** database, answering various **business and entertainment-related questions**. It demonstrates **advanced MySQL techniques**, such as **JOINs, aggregations, filtering with wildcards, and subqueries** to analyze **actors, films, payments, and customers** effectively.
 
-## 🔎 **Some of the queries I executed include:**\
+## 🔎 **Some of the queries I executed include:**
 ✅ Staff payment analysis using `JOIN`\
 ✅ Finding the most frequent actor surname using `GROUP BY`\
 ✅ Listing the total amount paid by each customer using `SUM`\
