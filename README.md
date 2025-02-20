@@ -1,12 +1,12 @@
 # 🎬 **MySQL Assignment – Sakila Database**
 
-📌 This project showcases **SQL queries** executed on the **`sakila`** database, answering various **business and entertainment-related questions**. It demonstrates **advanced MySQL techniques**, such as **JOINs, aggregations, filtering with wildcards, and subqueries** to analyze **actors, films, payments, and customers** effectively.
+📌 This project showcases **SQL queries** executed on the **`sakila`** database, answering various **business and entertainment-related questions**. It demonstrates **SQL knowledge and skills**, such as **JOINs, aggregations, filtering with wildcards, and Case Statements** to analyze **actors, films, payments, and customers** effectively.
 
 ## 🔎 **Some of the queries I executed include:**
 ✅ Staff payment analysis using `JOIN`\
 ✅ Finding the most frequent actor surname using `GROUP BY`\
 ✅ Listing the total amount paid by each customer using `SUM`\
-✅ Identifying the film with the most actors using `JOIN` and `COUNT`
+✅ Implementing a Case Statement to Categorise Films Based on Rental Duration
 
 ---
 
