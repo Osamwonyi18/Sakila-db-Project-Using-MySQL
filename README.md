@@ -33,15 +33,8 @@
 ✅ **Objective:** Identify the **most common last name** among actors.\
 ✅ **Technique:** `GROUP BY` aggregates similar last names, and `ORDER BY` ranks them.
 
-```sql
-SELECT last_name, COUNT(*) AS Frequency  
-FROM sakila.actor  
-GROUP BY last_name  
-ORDER BY Frequency DESC  
-LIMIT 1;
-```
-🎨 *Image Placeholder:*\
-`![Group By Example](https://via.placeholder.com/600x300?text=Most+Common+Actor+Surname)`
+![image](https://github.com/user-attachments/assets/6f8d698b-3fa6-4806-a6c8-d3b38cbed7fb)
+
 
 ---
 
@@ -50,53 +43,40 @@ LIMIT 1;
 ✅ **Objective:** Display the **total amount paid** by each customer.\
 ✅ **Technique:** `JOIN` links customer and payment tables, `SUM` aggregates their total payments.
 
-```sql
-SELECT c.first_name, c.last_name, SUM(p.amount) AS Total_Payment  
-FROM sakila.customer AS c  
-JOIN sakila.payment AS p  
-ON c.customer_id = p.customer_id  
-GROUP BY c.customer_id  
-ORDER BY c.last_name;
-```
-🎨 *Image Placeholder:*\
-`![SUM Example](https://via.placeholder.com/600x300?text=Total+Payments+Per+Customer)`
+![image](https://github.com/user-attachments/assets/f3e4e7f2-9660-4e04-8aa8-f39d25319dd9)
+
 
 ---
 
-### 🔹 **4️⃣ Using `JOIN` and `COUNT` to Find Films with the Most Actors**
+### 🔹 ** 4 Categorizing Films Based on Rental Duration
 
-✅ **Objective:** Identify **which film has the most actors**.\
-✅ **Technique:** `JOIN` connects `film_actor` and `film`, `COUNT` counts the number of actors per film.
+### **Task Description**
+A video rental store using the **Sakila** database wants to analyze its **film rental durations** to better understand how long customers typically rent movies. They need a report that **categorizes each film** into three groups based on its rental duration:  
 
-```sql
-SELECT f.title, COUNT(fa.actor_id) AS No_of_Actors  
-FROM sakila.film AS f  
-JOIN sakila.film_actor AS fa  
-ON f.film_id = fa.film_id  
-GROUP BY f.title  
-ORDER BY No_of_Actors DESC  
-LIMIT 1;
-```
-🎨 *Image Placeholder:*\
-`![Film Actors Count](https://via.placeholder.com/600x300?text=Film+With+Most+Actors)`
+1. **Short-Term Rentals** – Films rented for **3 days or less**  
+2. **Medium-Term Rentals** – Films rented for **4 to 6 days**  
+3. **Long-Term Rentals** – Films rented for **more than 6 days**  
+
+This classification will help the store **optimize pricing, recommend rental periods, and identify trends** in movie rentals.
+
+
+
+![image](https://github.com/user-attachments/assets/b048f1b8-cab8-48d8-9aeb-f065bcfbec05)
+
 
 ---
 
 ## 🚀 **How to Run These Queries**
 
-1️⃣ **Clone the repository:**
+1️⃣ Download the attached SQL data file.
 
-```bash
-git clone https://github.com/yourusername/mysql-sakila-assignment.git
-```
+2️⃣ Open MySQL Workbench (or any SQL tool) and import the file into your database.
 
-2️⃣ **Open MySQL Workbench (or any SQL tool) and select the `sakila` database:**
+3️⃣ Select the world database and execute the provided queries.
 
-```sql
-USE sakila;
-```
+USE world;
 
-3️⃣ **Run the SQL queries in the provided file.**
+4️⃣ Run the SQL queries in the provided file.
 
 ---
 
@@ -113,36 +93,11 @@ USE sakila;
 
 ---
 
-## 🎯 **Key Learnings**
-
-📈 **JOINs** are essential for linking related tables in databases.\
-📈 **GROUP BY** allows effective aggregation of data.\
-📈 **SUM** helps compute total payments for financial insights.\
-📈 **ORDER BY** ensures correct ranking of results.
-
----
-
 ## 📚 **References & Further Reading**
 
 📚 [MySQL Documentation](https://dev.mysql.com/doc/)\
 🏫 [W3Schools SQL Tutorial](https://www.w3schools.com/sql/)\
 📝 [SQL Practice Exercises](https://www.sql-practice.com/)
-
----
-
-### 🔥 **Why This Documentation Works?**
-
-✅ **Focused on complex tasks**\
-✅ **Well-organized sections for clarity**\
-✅ **Visual placeholders for key concepts**
-
----
-
-### 🚀 **Next Steps**
-
-🔹 Add **more advanced SQL concepts** (e.g., stored procedures, window functions).\
-🔹 Implement **performance optimizations** for large datasets.\
-🔹 Enhance the project with **data visualizations**.
 
 ---
 
