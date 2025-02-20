@@ -2,7 +2,7 @@
 
 📌 This project showcases **SQL queries** executed on the **`sakila`** database, answering various **business and entertainment-related questions**. It demonstrates **advanced MySQL techniques**, such as **JOINs, aggregations, filtering with wildcards, and subqueries** to analyze **actors, films, payments, and customers** effectively.
 
-🔎 **Key Topics Covered:**\
+## 🔎 **Some of the queries I executed include:**\
 ✅ Staff payment analysis using `JOIN`\
 ✅ Finding the most frequent actor surname using `GROUP BY`\
 ✅ Listing the total amount paid by each customer using `SUM`\
@@ -20,19 +20,11 @@
 
 ### 🔹 **1️⃣ Using `JOIN` for Staff Payment Analysis**
 
-✅ **Objective:** Display the total amount received by each staff member in **August 2005**.\
+✅ **Objective:** Return the total amount received by each staff member in **August 2005**.\
 ✅ **Technique:** `INNER JOIN` links **staff and payment tables**, while `SUM` aggregates total payments.
 
-```sql
-SELECT s.first_name, s.last_name, SUM(p.amount) AS Total_Revenue  
-FROM sakila.staff AS s  
-JOIN sakila.payment AS p  
-ON s.staff_id = p.staff_id  
-WHERE DATE_FORMAT(p.payment_date, '%M %Y') = 'August 2005'  
-GROUP BY s.staff_id;
-```
-🎨 *Image Placeholder:*\
-`![JOIN Example](https://via.placeholder.com/600x300?text=Staff+Payment+Analysis)`
+![image](https://github.com/user-attachments/assets/990d05b6-d7b6-420b-90e8-66091e3ef6f0)
+
 
 ---
 
